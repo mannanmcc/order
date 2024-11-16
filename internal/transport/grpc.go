@@ -1,19 +1,13 @@
 package transport
 
 import (
-	protos "github.com/mannanmcc/schemas/build/go/rpc/order"
-	grpc "google.golang.org/grpc"
+	schemas "github.com/mannanmcc/schemas/build/go/rpc/order"
 )
 
 type Server struct {
-	protos.UnimplementedOrderServiceServer
+	schemas.UnimplementedOrderServiceServer
 }
 
 func New() *Server {
 	return &Server{}
-}
-
-// Register register the handler in the GRPC server
-func (s *Server) Register(server *grpc.Server) {
-	protos.RegisterOrderServiceServer(server, s)
 }
