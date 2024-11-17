@@ -3,7 +3,7 @@ module github.com/mannanmcc/order
 go 1.22.7
 
 require (
-	github.com/mannanmcc/schemas v1.0.3
+	github.com/mannanmcc/schemas v1.0.4
 	google.golang.org/grpc v1.68.0
 )
 

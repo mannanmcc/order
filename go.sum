@@ -2,8 +2,8 @@ github.com/golang/protobuf v1.5.4 h1:i7eJL8qZTpSEXOPTxNKhASYpMn+8e5Q6AdndVa1dWek
 github.com/golang/protobuf v1.5.4/go.mod h1:lnTiLA8Wa4RWRcIUkrtSVa5nRhsEGBg48fD6rSs7xps=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
-github.com/mannanmcc/schemas v1.0.3 h1:g0HLEcuj/Gcpf04zVMJeVYSW4GZLxfYSr1IJU/sRSCk=
-github.com/mannanmcc/schemas v1.0.3/go.mod h1:HiTYR0kfl9j3Yy/FgeeoGiUYn09E0oimYqucA8wK+5M=
+github.com/mannanmcc/schemas v1.0.4 h1:ZiSEzWG6PSAaa2h1q2ZkXcOdzqYRrhk9b0/e2/6kDZM=
+github.com/mannanmcc/schemas v1.0.4/go.mod h1:HiTYR0kfl9j3Yy/FgeeoGiUYn09E0oimYqucA8wK+5M=
 golang.org/x/net v0.29.0 h1:5ORfpBpCs4HzDYoodCDBbwHzdR5UrLBZ3sOnUJmFoHo=
 golang.org/x/net v0.29.0/go.mod h1:gLkgy8jTGERgjzMic6DS9+SP0ajcu6Xu3Orq/SpETg0=
 golang.org/x/sys v0.25.0 h1:r+8e+loiHxRqhXVl6ML1nO3l1+oFoWbnlu2Ehimmi34=
