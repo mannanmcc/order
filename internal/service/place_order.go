@@ -4,7 +4,6 @@ import (
 	"context"
 	"errors"
 	stockClient "github.com/mannanmcc/order/internal/adapter/stock"
-	"log"
 )
 
 var (
@@ -30,13 +29,13 @@ type Order struct {
 	stClient StockChecker
 }
 
-func NewOrder(sc StockChecker) Order {
-	return Order{
+func NewOrder(sc StockChecker) *Order {
+	return &Order{
 		stClient: sc,
 	}
 }
 
-func (pl Order) PlaceOrder(ctx context.Context, req OrderRequest) (OrderResponse, error) {
+func (pl *Order) PlaceOrder(ctx context.Context, req OrderRequest) (OrderResponse, error) {
 	//validate the request - skipping for simplicity
 	//check availability with calling to stock API
 	resp, err := pl.stClient.CheckStock(ctx, stockClient.CheckStockRequest{
@@ -44,7 +43,6 @@ func (pl Order) PlaceOrder(ctx context.Context, req OrderRequest) (OrderResponse
 	})
 
 	if err != nil {
-		log.Printf("error checking stock %v", err)
 		return OrderResponse{}, errFailedToPlaceOrder
 
 	}

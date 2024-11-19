@@ -1,3 +1,4 @@
-STOCK_API_HOST_NAME: "0.0.0.0"
+STOCK_API_HOST_NAME: "stock"
 STOCK_API_HOST_PORT: "50051"
 stock_api_connection_timeout: 2s
+CONFIG_FILE: "./config.yaml"

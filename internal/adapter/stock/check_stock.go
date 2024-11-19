@@ -3,6 +3,7 @@ package stock
 import (
 	"context"
 	"errors"
+	"fmt"
 	"github.com/mannanmcc/schemas/build/go/rpc/stock"
 	"google.golang.org/grpc"
 )
@@ -19,8 +20,8 @@ type Client struct {
 	stockClient Stock
 }
 
-func New(cl Stock) Client {
-	return Client{stockClient: cl}
+func New(cl Stock) *Client {
+	return &Client{stockClient: cl}
 }
 
 type CheckStockRequest struct {
@@ -32,10 +33,11 @@ type CheckStockResponse struct {
 	QuantityAvailable int32
 }
 
-func (c Client) CheckStock(ctx context.Context, req CheckStockRequest) (CheckStockResponse, error) {
+func (c *Client) CheckStock(ctx context.Context, req CheckStockRequest) (CheckStockResponse, error) {
 	resp, err := c.stockClient.CheckStock(ctx, &stock.CheckStockRequest{ProductId: req.ProductId})
 
 	if err != nil {
+		fmt.Printf("failed to check stock: %v\n", err)
 		return CheckStockResponse{}, ErrorFailedToCommunicateStockService
 	}
 

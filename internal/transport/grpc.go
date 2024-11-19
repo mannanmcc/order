@@ -7,10 +7,10 @@ import (
 
 type Server struct {
 	schemas.UnimplementedOrderServiceServer
-	order service.Order
+	order *service.Order
 }
 
-func New(or service.Order) *Server {
+func New(or *service.Order) *Server {
 	return &Server{
 		order: or,
 	}
