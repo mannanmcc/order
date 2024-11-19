@@ -1,6 +1,7 @@
-# github.com/mannanmcc/schemas v1.0.3
+# github.com/mannanmcc/schemas v1.0.4
 ## explicit; go 1.22.7
 github.com/mannanmcc/schemas/build/go/rpc/order
+github.com/mannanmcc/schemas/build/go/rpc/stock
 # golang.org/x/net v0.29.0
 ## explicit; go 1.18
 golang.org/x/net/http/httpguts
@@ -115,3 +116,6 @@ google.golang.org/protobuf/runtime/protoimpl
 google.golang.org/protobuf/types/known/anypb
 google.golang.org/protobuf/types/known/durationpb
 google.golang.org/protobuf/types/known/timestamppb
+# gopkg.in/yaml.v2 v2.4.0
+## explicit; go 1.15
+gopkg.in/yaml.v2
